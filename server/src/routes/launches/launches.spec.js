@@ -3,13 +3,13 @@ const app = require('../../app');
 
 const {mongoConnect, mongoDisconnect} = require("../../services/mongo");
 
-const {loadPlantesData} = require("../../models/planets.model");
+const {loadPlanetsData} = require("../../models/planets.model");
 
 describe('Test Launch APIs', ()=> {
 
     beforeAll(async ()=> {
         await mongoConnect();
-        await loadPlantesData();
+        await loadPlanetsData();
     });
 
     afterAll(async ()=>{
